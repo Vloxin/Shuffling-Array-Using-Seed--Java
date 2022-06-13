@@ -1,0 +1,14 @@
+// To change the type of array , to intger array for example : swap the "Node" in the parameter list  to "shuffle(int array[], int seed)"
+// this function utilizez java.Util.random
+
+import java.util.Random;
+public static void shuffle(Node array[], int seed) { // takes seed and node array
+        Random rand = new Random(seed);
+        Node temp;
+        for (int i = 0; i < array.length; i++) { // shuffling array
+            int randomIndexToSwap = rand.nextInt(array.length);
+            temp = array[randomIndexToSwap];
+            array[randomIndexToSwap] = array[i];
+            array[i] = temp;
+        }
+    } 
